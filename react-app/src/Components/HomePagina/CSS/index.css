@@ -1,0 +1,35 @@
+.header {
+  background-image: url('../../../Images/banner.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: relative;
+  height: 100vh;
+  min-width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.description {
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  text-align: center;
+}
+
+.icon-padding {
+  padding-top: 20%;
+}
+
+#aanbevolen {
+  text-align: center;
+  padding-top: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
+}

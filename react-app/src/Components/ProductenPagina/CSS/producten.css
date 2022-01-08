@@ -1,0 +1,20 @@
+.product {
+  margin-right: 2%;
+  margin-bottom: 2%;
+  display:inline-flex;
+}
+
+.alleproducten {
+  position:static;
+  padding-left: 2%;
+  padding-top: 2%;
+  text-align: center;
+}
+
+.link {
+  color: #fff;
+}
+
+.link:hover {
+  color: #fff;
+}

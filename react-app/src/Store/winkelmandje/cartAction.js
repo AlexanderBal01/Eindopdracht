@@ -7,18 +7,17 @@ export const addToCart = (item, qty) => async (dispatch, getState) =>{
         method: "GET",
         responseType: "json",
     });
-    console.log(response);
+
+    const qtyAlsGetal = parseInt(qty);
 
     dispatch({
         type: actionTypes.ADD_TO_CART,
         payload: {
-            product: [
-                response.data[0].id,
-                response.data[0].productnaam,
-                response.data[0].afbeelding,
-                response.data[0].prijs,
-            ],
-            qty
+            product: response.data[0].id,
+            naam:  response.data[0].productnaam,
+            imageUrl: response.data[0].afbeelding,
+            prijs: response.data[0].prijs,
+            qty: qtyAlsGetal,
         }
     });
 

@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'react-scroll';
 import * as MDB from "mdbreact";
-import "./CSS/index.css";
+import "./CSS/Header.css";
 
 const Header = () => {
     return (

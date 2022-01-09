@@ -23,8 +23,9 @@ const routers = {
         });
     }),
 
-    productIdGet: router.get('/producten/:id([0-9])', (req, res) => {
+    productIdGet: router.get('/producten/:id([0-9]+)', (req, res) => {
         db.query(`SELECT * FROM product WHERE id=${req.params.id}`, (err, results, fields) => {
+            console.log(req.params.id);
             if (err){
                 res.send(err);
             }

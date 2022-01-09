@@ -1,0 +1,11 @@
+.links {
+    text-align: start;
+}
+
+.rechts {
+    text-align: end;
+}
+
+.error {
+    color: red;
+}

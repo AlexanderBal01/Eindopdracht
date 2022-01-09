@@ -5,7 +5,7 @@
 }
 
 .alleproducten {
-  position:static;
+  position:absolute;
   padding-left: 2%;
   padding-top: 2%;
   text-align: center;

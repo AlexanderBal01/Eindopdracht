@@ -7,32 +7,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Components/HomePagina/Home';
-import Producten from './Components/ProductenPagina/ProductenMain';
 import { Provider } from 'react-redux';
 import { store } from './Store/index';
-import Winkelmandje from './Components/WinkelmandjePagina/Winkelmandje';
-import ProductDetail from './Components/ProductenPagina/ProductDetail';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <React.StrictMode>
-      <Provider store={store}>
-        <BrowserRouter>
-          <Routes>
-          <Route path="*" element={<p>Not found</p>} />
-          <Route path="/" element={<Home />} />
-          <Route path="/producten">
-            <Route index element={<Producten />} />
-            <Route path=":id" element={<ProductDetail />} />
-          </Route> 
-          <Route path="winkelmandje" element={<Winkelmandje />} />
-        </Routes>
-        </BrowserRouter>
-      </Provider>
+      <App />        
     </React.StrictMode>
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

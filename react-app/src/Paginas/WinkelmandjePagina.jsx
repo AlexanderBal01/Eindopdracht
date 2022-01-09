@@ -49,7 +49,7 @@ const WinkelmandjePagina = () => {
                     <MDBUI.MDBRow className='justify-content-center'>
                         <MDBUI.MDBTypography className='text-primary text-center' tag='h2' variant="h2">Aantalproducten: {getCartCount()}</MDBUI.MDBTypography>
                         <MDBUI.MDBTypography className='text-primary text-center' tag='h2' variant="h2">Totaalprijs: € {getCartSubTotal().toFixed(2)}</MDBUI.MDBTypography>
-                        <ReactBootStrap.Button><NavLink className='link' to='/checkout'>CheckOut</NavLink></ReactBootStrap.Button>
+                        <NavLink className='link' to='/checkout'><ReactBootStrap.Button>CheckOut</ReactBootStrap.Button></NavLink>
                     </MDBUI.MDBRow>
                 </MDBUI.MDBContainer>
                 

@@ -2,8 +2,10 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as MDBUI from 'mdb-react-ui-kit';
 import * as ReactBootStrap from "react-bootstrap";
+import { useSelector } from 'react-redux';
 import * as Yup from 'yup';
-import './CSS/checkout.css'
+import './CSS/checkout.css';
+import axios from 'axios';
 
 const schema = Yup.object().shape({
     voorNaam: Yup.string().required("voornaam veld is verplicht"),
@@ -17,6 +19,10 @@ const schema = Yup.object().shape({
 })
 
 const CheckoutPagina = () => {
+    const cartState = useSelector(state => state.cart);
+
+    const { cartItems } = cartState;
+
     const formik = useFormik({
         initialValues: {
             voorNaam: '',
@@ -30,6 +36,11 @@ const CheckoutPagina = () => {
         },
         onSubmit: (values) => {
             console.log(values);
+            const data = {
+                klant: values,
+                producten: cartItems,
+            }
+            axios.post('http://localhost:4000/order', data);
         }, 
         validationSchema: schema,
     })
